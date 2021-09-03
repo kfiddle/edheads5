@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Edheads!</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/welcome.css">
+
+    <script src="js/navHeightMaker.js" defer></script>
+
+</head>
+<body>
+
+<section id="header">
+    <div class="logoContainer">
+        <div class="logo">
+            <img src="/assets/ed_logo.png" alt="" class="logoImg">
+        </div>
+    </div>
+    <div class="mainNavContainer">
+
+        <div class="weatherGirlContainer">
+            <div class="weatherGirl">
+                <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
+            </div>
+            <div class="bannerText"><a href="/login">Log In</a> or <a href="/sign-up">Sign Up!</a></div>
+        </div>
+        <ul class="mainNavLeft" id="mainNavLeft">
+            <li sec:authorize="isAuthenticated()" class="mainNavItem"><a href="/teachers">Teachers</a></li>
+            <li class="mainNavItem   activeNav"><a href="/welcome">Welcome</a></li>
+            <li class="mainNavItem"><a href="/about-us">About Us</a></li>
+            <li class="mainNavItem" style="margin-right: 2rem"><a href="/our-games">Our Games</a></li>
+            <li class="mainNavItem" style="margin-left: 2rem"><a href="/get-involved">Get Involved</a></li>
+            <li class="mainNavItem"><a href="/donate">Donate</a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="titlePanel">
+    <div class="contentContainerTitle">
+        <h1 class="welcomeTitle">
+            Welcome to Edheads!
+        </h1>
+
+        <!--        <h2 sec:authorize="isAuthenticated()">This will appear when logged in </h2>-->
+
+
+    </div>
+</section>
+
+<section id="aboutUs" class="contentPanel">
+    <div class="contentContainerTextLeft">
+        <div class="textBoxLeft">
+            <h2>About Us</h2>
+
+            <script src="//ap.lijit.com/www/delivery/fpi.js?z=331604&width=300&height=250"></script>
+
+
+            <h3>We inspire K12 students to pursue STEM careers through games!
+            </h3>
+            <p>Edheads stands at the intersection of the STEM employee pipeline and equity.
+                We reach students from all walks of life, and support teachers by reinforcing
+                the educational foundations students need to succeed in life.
+            </p>
+            <div class="buttonContainer">
+                <button class="textBoxButton"><a href="/about-us">Learn More</a></button>
+                <button class="textBoxButton"><a href="/our-games">Explore Our Games</a></button>
+            </div>
+
+        </div>
+
+        <div class="aboutUsCharacter">
+            <img src="/assets/robot.png" alt="" class="robot">
+        </div>
+    </div>
+</section>
+
+<section class="adPanel">
+    <div class="contentContainerAd">
+        <div>
+            <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adLeft">
+        </div>
+
+        <div>
+            <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adRight">
+        </div>
+    </div>
+</section>
+
+
+<section id="signUp" class="contentPanel">
+    <div class="contentContainerTextRight">
+        <div class="signUpCharacter">
+            <img src="/assets/robot.png" alt="" class="robot">
+        </div>
+        <div class="textBoxRight">
+            <h2>Sign Up</h2>
+            <h3>Great teacher content, just for teachers!!
+            </h3>
+            <p>Teachers, we heard you. Students shouldn’t access teacher content,
+                so we put it behind a log in. You will need to sign up and create
+                a log in to access all the teacher content we have to offer!
+            </p>
+            <button class="textBoxButton"><a href="sign-up">Sign Up</a></button>
+        </div>
+    </div>
+
+
+    </div>
+</section>
+
+<section class="adPanel">
+    <div class="contentContainerAd">
+        <div>
+            <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adLeft">
+        </div>
+
+        <div>
+            <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adRight">
+        </div>
+    </div>
+</section>
+
+<section id="donate" class="contentPanel">
+    <div class="contentContainerTextLeft">
+        <div class="textBoxLeft">
+            <h2>Get Involved</h2>
+            <h3>Help Edheads change the lives of millions of students!
+            </h3>
+            <p><span style="font-weight: 900; color: #d1a10e">YOU</span> can help us meet our mission.
+                You could donate, volunteer, introduce us to your company to sponsor a page or fund a new game,
+                or share your ideas of how to steer K12 students toward STEM careers.
+            </p>
+            <button class="textBoxButton"><a href="/get-involved">Get Involved</a></button>
+        </div>
+
+        <div class="donateCharacter">
+            <img src="/assets/robot.png" alt="" class="robot">
+        </div>
+    </div>
+</section>
+
+<section id="footer">
+    <div class="footerText">
+        <p>Edheads is a non-profit that creates unique,
+            free Web experiences to promote STEM education.
+        </p>
+    </div>
+
+    <div class="footerLinks">
+        <a href="https://www.facebook.com/Edheads">
+            <img src="/assets/facebook.png" alt="" class="socialIcon"></a>
+        <a href="https://twitter.com/Edheadsdotorg">
+            <img src="/assets/twitter.png" alt="" class="socialIcon"></a>
+        <a href="https://www.linkedin.com/company/edheads">
+            <img src="/assets/instagram.png" alt="" class="socialIcon"></a>
+        <a href="https://www.pinterest.com/edheads/_created/">
+            <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
+        <a href="https://www.youtube.com/user/Edheadsorg">
+            <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
+        <button class="footerButton"><a href="/donate">Make a Donation</a></button>
+    </div>
+</section>
+<script src="js/navHeightMaker.js"></script>
+
+</body>
+</html>
